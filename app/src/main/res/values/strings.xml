@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Tienda Virtual</string>
+    <string name="strHome"> Pet Shop</string>
+    <string name="btTitle"> INGRESAR</string>
+    <string name="btBuy"> COMPRAR</string>
+    <string name="strCategory"> PRODUCTOS</string>
+    <string name="strName"> </string>
+    <string name="strDescription"> </string>
+    <string name="strPrice"> </string>
+    <string name="strbtAdd"> + </string>
+    <string name="strDescTitle">Información del producto</string>
+
+    //Strings Information
+    <string name="strInfo1">Galletas para gato Marca CatCookies, golosinas baja en calorías, sabor a pollo; crujiente por fuera, suave y cremosa por dentro, la textura crujiente ayuda al control del sarro y las bolas de pelo. Contenido 85gr Hecho en Canadá.</string>
+    <string name="strInfo2"> Deliciosas galletas para perros (Snack) blando con sabor a pollo, que brinda nuevas sensaciones en el paladar de la mascota. Galletas funcionales formuladas especialmente para perros de 5 meses en adelante. Enriquecidas con probióticos y prebióticos.</string>
+    <string name="strInfo3"> Balance Gato es un alimento super premium para gatitos de casa o que realizan poca actividad física menores de un año. Es una comida para gatos que ayuda a que el cachorro tenga un buen desarrollo del cerebro, la vista, la digestión y las articulaciones.</string>
+    <string name="strInfo4"> Alimento premium ideal para perros pequeños adultos, al contener altos niveles de proteínas altamente seleccionadas, proporciona minerales y vitaminas que ayudarán el crecimiento sano de tu mascota. Contiene linaza y aceite de oliva.</string>
+    <string name="strInfo5"> Pelota para perro tamaño mediano, echa  en polímero termoplástico, material 100% seguro para tu perro ya que no es tóxico, es lavable, es ligero, es un material reciclable y tiene una baja absorción al agua. Ideal para salir al parque o de viaje.</string>
+    <string name="strInfo6"> El resorte integrado del mango se puede sostener de forma segura en la mano para reducir el riesgo de lesiones a la mascota. La hoja afilada está hecha de acero inoxidable de alta calidad para un fácil corte, robustez. Multifunción: apto para perros y gatos.</string>
+</resources>
