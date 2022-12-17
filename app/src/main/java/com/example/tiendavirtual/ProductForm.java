@@ -49,7 +49,7 @@ public class ProductForm extends AppCompatActivity{
                         editNameFormProduct.getText().toString(),
                         editDescriptionFormProduct.getText().toString(),
                         editPriceFormProduct.getText().toString(),
-                        img,
+                        "",
                         editInfoFormProduct.getText().toString()
                 );
 
