@@ -1,10 +1,15 @@
 package com.example.tiendavirtual.Services;
 
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.widget.ImageView;
 
 import com.example.tiendavirtual.Entities.Producto;
 import com.example.tiendavirtual.R;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 public class ProductService {
@@ -16,7 +21,7 @@ public class ProductService {
         } else {
             while (cursor.moveToNext()) {
                 Producto producto = new Producto(
-                        cursor.getString(4),
+                        cursor.getBlob(4),
                         cursor.getString(1),
                         cursor.getString(2),
                         Integer.parseInt(cursor.getString(3)),
@@ -27,7 +32,14 @@ public class ProductService {
         }
         return list;
     }
+        public byte[] imageViewToByte (ImageView imageView){
+            Bitmap bitmap= ((BitmapDrawable)imageView.getDrawable()).getBitmap();
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                    byte[]byteArray = stream.toByteArray();
+                return byteArray;
 
+        }
 
 
 }

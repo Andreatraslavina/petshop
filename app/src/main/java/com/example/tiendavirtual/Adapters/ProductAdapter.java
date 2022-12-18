@@ -2,6 +2,9 @@ package com.example.tiendavirtual.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,8 +64,13 @@ public class ProductAdapter extends BaseAdapter {
         TextView txtDescription = (TextView) view.findViewById(R.id.txtDescription);
         TextView txtPrice = (TextView) view.findViewById(R.id.txtPrice);
 
-        int resourceId = context.getResources().getIdentifier(producto.getImage(), "drawable", context.getPackageName());
-        imgCat.setImageResource(resourceId);
+        //int resourceId = context.getResources().getIdentifier(producto.getImage(), "drawable", context.getPackageName());
+        //imgCat.setImageResource(resourceId);
+
+        byte[] image = producto.getImage();
+        Bitmap bitmap = BitmapFactory.decodeByteArray(image, 0, image.length);
+
+        imgCat.setImageBitmap(bitmap);
         txtName.setText(producto.getName());
         txtDescription.setText(producto.getDescription());
         txtPrice.setText(String.valueOf(producto.getPrice()));
@@ -72,7 +80,7 @@ public class ProductAdapter extends BaseAdapter {
             public void onClick(View view) {
                 Intent intent = new Intent(context.getApplicationContext(), DescripcionActivity.class);
                 intent.putExtra("name", producto.getName());
-                intent.putExtra("image",  context.getResources().getIdentifier(producto.getImage(), "drawable", context.getPackageName()));
+                intent.putExtra("image", producto.getImage());
                 intent.putExtra("price", producto.getPrice());
                 intent.putExtra("information", producto.getInformation());
                 context.startActivity(intent);

@@ -36,13 +36,13 @@ public class DBHelper extends SQLiteOpenHelper {
 
     //METODO CRUD
 
-    public void insertData (String name, String description, String price, String image, String information){
+    public void insertData (String name, String description, String price, byte[] image, String information){
         String sql = "INSERT INTO PRODUCTS VALUES(null, ?, ?, ?, ?, ?)";
         SQLiteStatement statement = sqLiteDatabase.compileStatement(sql);
         statement.bindString(1, name);
         statement.bindString(2, description);
         statement.bindString(3, price);
-        statement.bindString(4, image);
+        statement.bindBlob(4, image);
         statement.bindString(5, information);
         statement.executeInsert();
 

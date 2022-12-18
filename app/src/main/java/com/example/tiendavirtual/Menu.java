@@ -45,6 +45,7 @@ public class Menu extends AppCompatActivity {
 
         try {
             dbHelper = new DBHelper(this);
+            byte[] img = "".getBytes();
             /*dbHelper.insertData("Galletas para gato", "Delicioso snack", "15000", "snack_gato_3", getResources().getString(R.string.strInfo1));
             dbHelper.insertData("Galletas para perro", "Delicioso snack", "13000", "galletas_perro2", getResources().getString(R.string.strInfo2));
             dbHelper.insertData("Comida para gato", "Sabor a pollo", "43000", "comida_gato", getResources().getString(R.string.strInfo3));
@@ -54,7 +55,7 @@ public class Menu extends AppCompatActivity {
             productService = new ProductService();
             Cursor cursor =dbHelper.getData();
             arrayProducts = productService.cursorToArray(cursor);
-            Toast.makeText(this, "Insert OK", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Insert OK", Toast.LENGTH_SHORT).show();
         }catch (Exception e){
             Log.e("Database", e.toString());
             //Toast.makeText(this,e.toString(), Toast.LENGTH_LONG).show();

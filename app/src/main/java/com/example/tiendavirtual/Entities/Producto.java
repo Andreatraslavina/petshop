@@ -1,13 +1,13 @@
 package com.example.tiendavirtual.Entities;
 
 public class Producto {
-    private String image;
+    private byte[] image;
     private String name;
     private String description;
     private int price;
     private String information;
 
-    public Producto(String image, String name, String description, int price, String information) {
+    public Producto(byte[] image, String name, String description, int price, String information) {
         this.image = image;
         this.name = name;
         this.description = description;
@@ -15,11 +15,13 @@ public class Producto {
         this.information = information;
     }
 
-    public String getImage() {
+
+
+    public byte[] getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(byte[] image) {
         this.image = image;
     }
 
