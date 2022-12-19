@@ -1,5 +1,6 @@
 package com.example.tiendavirtual.DB;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -52,5 +53,22 @@ public class DBHelper extends SQLiteOpenHelper {
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM PRODUCTS", null);
         return cursor;
     }
+    public Cursor getDataById(String id){
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM PRODUCTS WHERE id = "+id, null);
+        return cursor;
+    }
 
+    public void deleteDataById(String id){
+         sqLiteDatabase.execSQL("DELETE FROM PRODUCTS WHERE id = "+id);
+
+    }
+    public void updateDataById (String id,String name, String description, String price, byte[] image, String information){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("name", name);
+        contentValues.put("description", description);
+        contentValues.put("price", price);
+        contentValues.put("image", image);
+        contentValues.put("information", information);
+        sqLiteDatabase.update("PRODUCTS", contentValues, "id = ?", new String[]{id});
+    }
 }
