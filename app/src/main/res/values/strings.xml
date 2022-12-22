@@ -17,4 +17,5 @@
     <string name="strInfo4"> Alimento premium ideal para perros pequeños adultos, al contener altos niveles de proteínas altamente seleccionadas, proporciona minerales y vitaminas que ayudarán el crecimiento sano de tu mascota. Contiene linaza y aceite de oliva.</string>
     <string name="strInfo5"> Pelota para perro tamaño mediano, echa  en polímero termoplástico, material 100% seguro para tu perro ya que no es tóxico, es lavable, es ligero, es un material reciclable y tiene una baja absorción al agua. Ideal para salir al parque o de viaje.</string>
     <string name="strInfo6"> El resorte integrado del mango se puede sostener de forma segura en la mano para reducir el riesgo de lesiones a la mascota. La hoja afilada está hecha de acero inoxidable de alta calidad para un fácil corte, robustez. Multifunción: apto para perros y gatos.</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

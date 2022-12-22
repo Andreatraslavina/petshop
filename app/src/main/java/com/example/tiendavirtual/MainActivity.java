@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.FirebaseApp;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -22,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private View.OnClickListener btnEntryListener = new View.OnClickListener() {
         public void onClick(View v) {
-            Intent intent = new Intent (MainActivity.this, Menu.class);
+            Intent intent = new Intent (MainActivity.this, Login.class);
             startActivity(intent);
         }
     };
